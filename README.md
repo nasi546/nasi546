@@ -53,5 +53,5 @@
 
 ### 📫 Contact
 
-- Email: _원하면 여기에 메일 주소_
+- Email: alstjd546@naver.com
 - GitHub: [@nasi546](https://github.com/nasi546)
