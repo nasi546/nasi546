@@ -81,5 +81,5 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 
 ### 📫 Contact
 
-- Email: alstjd546@naver.com
+- Email: minsoung1027@gmail.com
 - GitHub: [@nasi546](https://github.com/nasi546)
