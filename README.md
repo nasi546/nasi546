@@ -37,6 +37,8 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white)
 ![STM32CubeIDE](https://img.shields.io/badge/STM32CubeIDE-03234B?style=flat)
 ![CMake](https://img.shields.io/badge/CMake-064F8C?style=flat&logo=cmake&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white)
+![systemd](https://img.shields.io/badge/systemd-000000?style=flat&logo=systemd&logoColor=white)
 
 ---
 
@@ -49,6 +51,7 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 | Embedded Linux & BSP | Yocto로 RPi5용 이미지 빌드, meta-layer 작성, 디바이스 트리/오버레이, systemd 서비스 등록, MCP2515(CAN) 설정 | [AI-Black-Box](https://github.com/nasi546/AI-Black-Box) |
 | 영상·스트리밍 파이프라인 | V4L2 카메라 캡쳐 → GStreamer 파이프라인 → AI 인퍼런스 → 오버레이 → 출력까지 흐름 설계 및 디버깅 | AI-Black-Box |
 | 네트워크 & 통신 | SocketCAN, UDP/TCP, ESP8266/ESP32 Wi-Fi를 이용한 서버–노드 통신 프로토콜 설계 | AI-Black-Box, Aiot_SmartHome |
+| 운영/배포 자동화 (Linux) | udev 트리거 + systemd 서비스/타이머로 USB 기반 앱 업데이트 구성, state.json 기반 버전관리, 헬스체크(pending) 승인, 자동/수동 롤백, 로그/히스토리 관리 | [Raspberry Pi 5 USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update) |
 | 알고리즘 & 기본기 | C++ STL, 자료구조/알고리즘 문제 풀이, 코드 리팩토링 | [baekjoon](https://github.com/nasi546/baekjoon) |
 
 ---
@@ -66,6 +69,10 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 - **[Flood_barrier](https://github.com/nasi546/Flood_barrier)**  
   수위 센서 + 서보모터 + LCD + IR 리모컨을 이용한 자동 차수막 시스템.  
   침수 위험 단계에 따라 차수막 자동 상승/하강 및 경고 출력.
+
+- **[Raspberry Pi 5 – USB Auto Update System](https://github.com/nasi546/Raspbery-pi5-USB-update)**  
+  Raspberry Pi 5(Raspberry Pi OS)에서 USB/외장 SSD를 꽂기만 하면 앱이 자동 업데이트되는 배포 시스템.  
+  udev 트리거 + systemd 서비스/타이머로 자동 실행, state.json 기반 버전관리, 헬스체크(pending) 승인, 자동/수동 롤백, 업데이트 히스토리 로그까지 포함.
 
 - **[baekjoon](https://github.com/nasi546/baekjoon)**  
   C++로 백준 알고리즘 문제를 풀이하며 자료구조/알고리즘 기본기를 다지는 저장소.
