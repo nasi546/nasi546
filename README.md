@@ -1,12 +1,63 @@
 ## 👋 Hi, I'm Minseong (민성)
 
 임베디드 & BSP 엔지니어를 목표로 공부하고 있는 개발자입니다.  
-STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서  
-**실제 하드웨어가 움직이는 프로젝트**를 만드는 걸 좋아합니다.
+**“실제 하드웨어가 움직이고, 부팅하면 자동으로 돌아가는 시스템”**을 만드는 걸 좋아합니다.
+
+- 🧩 **Linux BSP/Yocto**: 커스텀 이미지, meta-layer, overlay/DT, systemd 기반 운영
+- 🧠 **Linux Device Driver**: char device(/dev), poll/read, IRQ, I2C/GPIO, RTC 연동
+- 🎥 **Multimedia/AI Pipeline**: V4L2 + GStreamer + OpenCV + (Hailo) 인퍼런스/오버레이
+- 🔌 **통신/연동**: SocketCAN, UDP/TCP, MCU↔Linux 시스템 통합
+
+**Contact**: minsoung1027@gmail.com · **GitHub**: [@nasi546](https://github.com/nasi546)
 
 ---
 
-### 🛠 Tech Stack
+### 💡 What I Can Do (Quick View)
+
+| 분야 | 내가 할 수 있는 일 (요약) | 관련 프로젝트 |
+| --- | --- | --- |
+| **Embedded Linux & BSP** | Yocto 이미지 빌드/커스텀, meta-layer 작성, DT/overlay, systemd 서비스 구성 | **[AI-Black-Box](https://github.com/nasi546/AI-Black-Box)** |
+| **Linux Device Driver** | char device(/dev), poll/read, IRQ, I2C/GPIO, RTC 연동, udev + systemd 자동화 | **[Device_Driver_Mini_Project](https://github.com/nasi546/Device_Driver_Mini_Project)** |
+| **운영/배포 자동화 (Linux)** | udev 트리거 + systemd로 자동 실행, 버전/헬스체크 기반 안전 업데이트, 롤백/로그 | **[USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update)** |
+| **영상/스트리밍 파이프라인** | V4L2 캡쳐 → GStreamer → 처리/오버레이 → 출력/디버깅 | **[AI-Black-Box](https://github.com/nasi546/AI-Black-Box)** |
+| **MCU / 센서·액추에이터** | STM32 주변장치(UART/I2C/SPI/ADC/Timer), 센서/모터/부저/LED 제어, 간단 FreeRTOS | [Flood_barrier](https://github.com/nasi546/Flood_barrier), [Aiot_SmartHome](https://github.com/nasi546/Aiot_SmartHome) |
+| **네트워크/통신** | SocketCAN, UDP/TCP, Wi-Fi(ESP8266/ESP32) 기반 노드 통신 설계/연동 | AI-Black-Box, Aiot_SmartHome |
+| **기본기/알고리즘** | C++ STL, 자료구조/알고리즘 풀이 및 리팩토링 습관 | **[baekjoon](https://github.com/nasi546/baekjoon)** |
+
+---
+
+### 🚀 Featured Projects
+
+#### Major
+- **[AI-Black-Box](https://github.com/nasi546/AI-Black-Box)**  
+  Raspberry Pi 5 + (Hailo-8) + MCP2515 CAN + 카메라 기반 시스템.  
+  **Yocto 커스텀 이미지**, GStreamer 파이프라인, CAN → KUKSA → AGL 클러스터 연동.
+
+- **[Raspberry Pi 5 – USB Auto Update System](https://github.com/nasi546/Raspbery-pi5-USB-update)**  
+  USB/외장 SSD 삽입만으로 자동 업데이트.  
+  udev + systemd, state.json 기반 버전관리, **헬스체크 승인(pending) + 자동/수동 롤백 + 로그**.
+
+#### Mini (Device Driver)
+- **[Device Driver Mini Project](https://github.com/nasi546/Device_Driver_Mini_Project)**  
+  Raspberry Pi 4B 기반 **Linux 디바이스 드라이버(4) + 데몬 + systemd/udev 자동 실행**.  
+  OLED(SSD1306) 시간/온습도 표시, Rotary/Key로 **RTC 시간 설정**, LED bar로 **습도 레벨 게이지** 출력.
+
+#### Others
+- **[Aiot_SmartHome](https://github.com/nasi546/Aiot_SmartHome)**  
+  STM32 + ESP + RPi 기반 AIoT 스마트홈 프로토타입(센서/액추에이터 통합).
+
+- **[Flood_barrier](https://github.com/nasi546/Flood_barrier)**  
+  수위 기반 자동 차수막(서보 + LCD + 리모컨) 제어.
+
+- **[baekjoon](https://github.com/nasi546/baekjoon)**  
+  C++ 알고리즘 풀이 저장소.
+
+---
+
+<details>
+<summary><b>🛠 Tech Stack (click to expand)</b></summary>
+
+<br/>
 
 **Languages**  
 ![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
@@ -40,51 +91,4 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white)
 ![systemd](https://img.shields.io/badge/systemd-000000?style=flat&logo=systemd&logoColor=white)
 
----
-
-### 💡 What I Can Do
-
-| 분야 | 내가 할 수 있는 일 | 관련 프로젝트 |
-| --- | --- | --- |
-| 임베디드 MCU (STM32) | GPIO / 타이머 / ADC / UART / I2C / SPI 설정, 센서 값 읽고 모터·부저·LED 제어, 간단한 FreeRTOS 태스크 구성 | [Flood_barrier](https://github.com/nasi546/Flood_barrier), [Aiot_SmartHome](https://github.com/nasi546/Aiot_SmartHome) |
-| 센서·액추에이터 통합 | 수위·가스·화재·진동·PIR·온습도 센서, 서보모터, 릴레이, RFID, LCD 등 여러 하드웨어를 하나의 시스템으로 통합 | Aiot_SmartHome, Flood_barrier |
-| Embedded Linux & BSP | Yocto로 RPi5용 이미지 빌드, meta-layer 작성, 디바이스 트리/오버레이, systemd 서비스 등록, MCP2515(CAN) 설정 | [AI-Black-Box](https://github.com/nasi546/AI-Black-Box) |
-| 영상·스트리밍 파이프라인 | V4L2 카메라 캡쳐 → GStreamer 파이프라인 → AI 인퍼런스 → 오버레이 → 출력까지 흐름 설계 및 디버깅 | AI-Black-Box |
-| Linux Device Driver | Character device(/dev), poll/read, IRQ, I2C/GPIO 드라이버 구현, RTC 연동, udev + systemd 자동화 | [Device_Driver_Mini_Project](https://github.com/nasi546/Device_Driver_Mini_Project) |
-| 네트워크 & 통신 | SocketCAN, UDP/TCP, ESP8266/ESP32 Wi-Fi를 이용한 서버–노드 통신 프로토콜 설계 | AI-Black-Box, Aiot_SmartHome |
-| 운영/배포 자동화 (Linux) | udev 트리거 + systemd 서비스/타이머로 USB 기반 앱 업데이트 구성, state.json 기반 버전관리, 헬스체크(pending) 승인, 자동/수동 롤백, 로그/히스토리 관리 | [Raspberry Pi 5 USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update) |
-| 알고리즘 & 기본기 | C++ STL, 자료구조/알고리즘 문제 풀이, 코드 리팩토링 | [baekjoon](https://github.com/nasi546/baekjoon) |
-
----
-
-### 🚀 Featured Projects
-
-- **[AI-Black-Box](https://github.com/nasi546/AI-Black-Box)**  
-  Raspberry Pi 5 + Hailo-8 + MCP2515 CAN + 카메라 기반 차량용 AI 블랙박스 / 시뮬레이터 시스템.  
-  Yocto 커스텀 이미지, GStreamer 파이프라인, CAN → KUKSA → AGL 클러스터 연동.
-
-- **[Aiot_SmartHome](https://github.com/nasi546/Aiot_SmartHome)**  
-  STM32 + ESP8266 + ESP32-CAM + Raspberry Pi 5를 이용한 AIoT 스마트홈 프로토타입.  
-  가스/화재/진동/온습도/날씨/창문/히터/출입(RFID, PIR)까지 통합 제어.
-
-- **[Flood_barrier](https://github.com/nasi546/Flood_barrier)**  
-  수위 센서 + 서보모터 + LCD + IR 리모컨을 이용한 자동 차수막 시스템.  
-  침수 위험 단계에 따라 차수막 자동 상승/하강 및 경고 출력.
-
-- **[Raspberry Pi 5 – USB Auto Update System](https://github.com/nasi546/Raspbery-pi5-USB-update)**  
-  Raspberry Pi 5(Raspberry Pi OS)에서 USB/외장 SSD를 꽂기만 하면 앱이 자동 업데이트되는 배포 시스템.  
-  udev 트리거 + systemd 서비스/타이머로 자동 실행, state.json 기반 버전관리, 헬스체크(pending) 승인, 자동/수동 롤백, 업데이트 히스토리 로그까지 포함.
-
-- **[Device Driver Mini Project](https://github.com/nasi546/Device_Driver_Mini_Project)**  
-  Raspberry Pi 4B 기반 **Linux 디바이스 드라이버(4종) + 데몬 + systemd/udev 자동 실행** 미니 프로젝트.  
-  OLED(SSD1306) 시간/온습도 표시, Rotary/Key로 **RTC 시간 설정**, LED bar로 **습도 레벨 게이지** 출력.
-  
-- **[baekjoon](https://github.com/nasi546/baekjoon)**  
-  C++로 백준 알고리즘 문제를 풀이하며 자료구조/알고리즘 기본기를 다지는 저장소.
-
----
-
-### 📫 Contact
-
-- Email: minsoung1027@gmail.com
-- GitHub: [@nasi546](https://github.com/nasi546)
+</details>
