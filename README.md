@@ -1,94 +1,73 @@
 ## 👋 Hi, I'm Minseong (민성)
 
+**"하드웨어를 실제로 움직이는 즐거움을 아는 엔지니어"**
+
 임베디드 & BSP 엔지니어를 목표로 공부하고 있는 개발자입니다.  
-**“실제 하드웨어가 움직이고, 부팅하면 자동으로 돌아가는 시스템”**을 만드는 걸 좋아합니다.
-
-- 🧩 **Linux BSP/Yocto**: 커스텀 이미지, meta-layer, overlay/DT, systemd 기반 운영
-- 🧠 **Linux Device Driver**: char device(/dev), poll/read, IRQ, I2C/GPIO, RTC 연동
-- 🎥 **Multimedia/AI Pipeline**: V4L2 + GStreamer + OpenCV + (Hailo) 인퍼런스/오버레이
-- 🔌 **통신/연동**: SocketCAN, UDP/TCP, MCU↔Linux 시스템 통합
-
-**Contact**: minsoung1027@gmail.com · **GitHub**: [@nasi546](https://github.com/nasi546)
+STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서  
+**실제 하드웨어가 동작하는 시스템**을 설계하고 구현하는 것을 좋아합니다.
 
 ---
 
-### 💡 What I Can Do (Quick View)
+### 🛠 Tech Stack
 
-| 분야 | 내가 할 수 있는 일 (요약) | 관련 프로젝트 |
-| --- | --- | --- |
-| **Embedded Linux & BSP** | Yocto 이미지 빌드/커스텀, meta-layer 작성, DT/overlay, systemd 서비스 구성 | **[AI-Black-Box](https://github.com/nasi546/AI-Black-Box)** |
-| **Linux Device Driver** | char device(/dev), poll/read, IRQ, I2C/GPIO, RTC 연동, udev + systemd 자동화 | **[Device_Driver_Mini_Project](https://github.com/nasi546/Device_Driver_Mini_Project)** |
-| **운영/배포 자동화 (Linux)** | udev 트리거 + systemd로 자동 실행, 버전/헬스체크 기반 안전 업데이트, 롤백/로그 | **[USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update)** |
-| **영상/스트리밍 파이프라인** | V4L2 캡쳐 → GStreamer → 처리/오버레이 → 출력/디버깅 | **[AI-Black-Box](https://github.com/nasi546/AI-Black-Box)** |
-| **MCU / 센서·액추에이터** | STM32 주변장치(UART/I2C/SPI/ADC/Timer), 센서/모터/부저/LED 제어, 간단 FreeRTOS | [Flood_barrier](https://github.com/nasi546/Flood_barrier), [Aiot_SmartHome](https://github.com/nasi546/Aiot_SmartHome) |
-| **네트워크/통신** | SocketCAN, UDP/TCP, Wi-Fi(ESP8266/ESP32) 기반 노드 통신 설계/연동 | AI-Black-Box, Aiot_SmartHome |
-| **기본기/알고리즘** | C++ STL, 자료구조/알고리즘 풀이 및 리팩토링 습관 | **[baekjoon](https://github.com/nasi546/baekjoon)** |
+**Languages** <img src="https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white"/> <img src="https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white"/> <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/>
+
+**Embedded / MCU** <img src="https://img.shields.io/badge/STM32-03234B?style=flat&logo=stmicroelectronics&logoColor=white"/> <img src="https://img.shields.io/badge/FreeRTOS-009688?style=flat"/> <img src="https://img.shields.io/badge/ESP8266-000000?style=flat"/> <img src="https://img.shields.io/badge/ESP32-000000?style=flat"/>
+
+**Linux & BSP** <img src="https://img.shields.io/badge/Embedded_Linux-000000?style=flat&logo=linux&logoColor=white"/> <img src="https://img.shields.io/badge/Yocto_Project-35495E?style=flat"/> <img src="https://img.shields.io/badge/Automotive_Grade_Linux-009639?style=flat"/> <img src="https://img.shields.io/badge/CAN-Bus-003366?style=flat"/>
+
+**Multimedia / AI** <img src="https://img.shields.io/badge/GStreamer-FF6F00?style=flat"/> <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white"/> <img src="https://img.shields.io/badge/Hailo--8-FF1493?style=flat"/> <img src="https://img.shields.io/badge/CARLA_Simulator-000000?style=flat"/>
+
+**Tools** <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white"/> <img src="https://img.shields.io/badge/STM32CubeIDE-03234B?style=flat"/> <img src="https://img.shields.io/badge/CMake-064F8C?style=flat&logo=cmake&logoColor=white"/> <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white"/> <img src="https://img.shields.io/badge/systemd-000000?style=flat&logo=systemd&logoColor=white"/>
+
+---
+
+### 💡 What I Can Do
+
+| 분야 | 내가 할 수 있는 일 | 관련 프로젝트 |
+| :--- | :--- | :--- |
+| **임베디드 MCU** <br>(STM32) | • GPIO / 타이머 / ADC / UART / I2C / SPI 설정 <br>• 센서 값 읽고 모터·부저·LED 제어 <br>• FreeRTOS 태스크 구성 및 스케줄링 | [Flood_barrier](https://github.com/nasi546/Flood_barrier)<br>[Aiot_SmartHome](https://github.com/nasi546/Aiot_SmartHome) |
+| **센서·액추에이터 통합** | • 수위·가스·화재·진동·PIR·온습도 센서 제어 <br>• 서보모터, 릴레이, RFID, LCD 등 이종 하드웨어 통합 시스템 구축 | Aiot_SmartHome<br>Flood_barrier |
+| **Embedded Linux** <br>**& BSP** | • **Yocto** : RPi5용 이미지 빌드, meta-layer 작성 <br>• **Device Tree** : 오버레이 적용 및 커널 설정 <br>• **System** : systemd 서비스 등록, MCP2515(CAN) 설정 | [AI-Black-Box](https://github.com/nasi546/AI-Black-Box) |
+| **영상·스트리밍** | • V4L2 카메라 캡쳐 → GStreamer 파이프라인 설계 <br>• AI 인퍼런스 연동 및 오버레이 출력 최적화 | AI-Black-Box |
+| **Linux Device Driver** | • Character device(/dev), poll/read, IRQ 구현 <br>• I2C/GPIO 드라이버 직접 구현 및 RTC 연동 <br>• udev + systemd를 활용한 자동화 | [Device_Driver_Mini_Project](https://github.com/nasi546/Device_Driver_Mini_Project) |
+| **운영/배포 자동화** | • udev 트리거를 이용한 USB 삽입 감지 자동화 <br>• state.json 기반 버전 관리 및 롤백 시스템 구현 | [Raspberry Pi 5 USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update) |
+| **알고리즘 & 기본기** | • C++ STL 활용, 자료구조/알고리즘 문제 풀이 <br>• 코드 리팩토링 및 최적화 | [baekjoon](https://github.com/nasi546/baekjoon) |
 
 ---
 
 ### 🚀 Featured Projects
 
-#### Major
-- **[AI-Black-Box](https://github.com/nasi546/AI-Black-Box)**  
-  Raspberry Pi 5 + (Hailo-8) + MCP2515 CAN + 카메라 기반 시스템.  
-  **Yocto 커스텀 이미지**, GStreamer 파이프라인, CAN → KUKSA → AGL 클러스터 연동.
+#### 1. [AI-Black-Box](https://github.com/nasi546/AI-Black-Box)
+> **Raspberry Pi 5 + Hailo-8 + CAN 기반 차량용 AI 블랙박스**
 
-- **[Raspberry Pi 5 – USB Auto Update System](https://github.com/nasi546/Raspbery-pi5-USB-update)**  
-  USB/외장 SSD 삽입만으로 자동 업데이트.  
-  udev + systemd, state.json 기반 버전관리, **헬스체크 승인(pending) + 자동/수동 롤백 + 로그**.
+* **핵심 기술:** Yocto 커스텀 이미지, GStreamer, CAN → KUKSA → AGL 클러스터 연동
+* **내용:** 실제 차량 데이터를 모사하여 CAN 통신으로 전송하고, AI 가속기(Hailo-8)를 통해 객체를 실시간 탐지 및 녹화하는 블랙박스 시스템입니다.
 
-#### Mini (Device Driver)
-- **[Device Driver Mini Project](https://github.com/nasi546/Device_Driver_Mini_Project)**  
-  Raspberry Pi 4B 기반 **Linux 디바이스 드라이버(4) + 데몬 + systemd/udev 자동 실행**.  
-  OLED(SSD1306) 시간/온습도 표시, Rotary/Key로 **RTC 시간 설정**, LED bar로 **습도 레벨 게이지** 출력.
+#### 2. [Raspberry Pi 5 – USB Auto Update System](https://github.com/nasi546/Raspbery-pi5-USB-update)
+> **인터넷 연결 없이 USB만 꽂으면 끝나는 펌웨어 자동 업데이트 시스템**
 
-#### Others
-- **[Aiot_SmartHome](https://github.com/nasi546/Aiot_SmartHome)**  
-  STM32 + ESP + RPi 기반 AIoT 스마트홈 프로토타입(센서/액추에이터 통합).
+* **핵심 기술:** udev, systemd Service/Timer, Shell Script, JSON Parsing
+* **내용:** 현장 유지보수를 위해 USB/외장 SSD 연결 시 자동으로 앱을 업데이트합니다. 버전 관리, 헬스 체크, 자동 롤백, 로그 관리까지 포함된 안정적인 배포 파이프라인을 구현했습니다.
 
-- **[Flood_barrier](https://github.com/nasi546/Flood_barrier)**  
-  수위 기반 자동 차수막(서보 + LCD + 리모컨) 제어.
+#### 3. [Device Driver Mini Project](https://github.com/nasi546/Device_Driver_Mini_Project)
+> **리눅스 커널 레벨부터 유저 공간까지: 디바이스 드라이버 풀스택 구현**
 
-- **[baekjoon](https://github.com/nasi546/baekjoon)**  
-  C++ 알고리즘 풀이 저장소.
+* **핵심 기술:** Linux Kernel Module, Character Device, I2C Protocol, RTC
+* **내용:** Raspberry Pi 4B에서 OLED, RTC, LED Bar 등을 제어하는 디바이스 드라이버 4종을 직접 작성하고, 데몬 앱과 연동하여 시스템을 제어하는 학습 프로젝트입니다.
+
+#### 4. [Aiot_SmartHome](https://github.com/nasi546/Aiot_SmartHome)
+> **STM32 & ESP32 & RPi5를 통합한 멀티 MCU 스마트홈**
+
+* **핵심 기술:** STM32 HAL, FreeRTOS, Socket 통신, Sensor Integration
+* **내용:** 가스/화재/방범 등 다양한 센서를 통합 관리하며, 외부 위협 감지 시 자동으로 차단 및 경고 시스템이 작동하는 종합 IoT 프로젝트입니다.
 
 ---
 
-<details>
-<summary><b>🛠 Tech Stack (click to expand)</b></summary>
+### 📫 Contact
 
-<br/>
+새로운 기술을 배우고 적용하여 **실제 하드웨어를 움직일 때** 가장 큰 즐거움을 느낍니다.  
+기술적인 토론이나 협업 제안은 언제든 환영합니다!
 
-**Languages**  
-![C](https://img.shields.io/badge/C-00599C?style=flat&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=flat&logo=c%2B%2B&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-
-**Embedded / MCU**  
-![STM32](https://img.shields.io/badge/STM32-03234B?style=flat&logo=stmicroelectronics&logoColor=white)
-![FreeRTOS](https://img.shields.io/badge/FreeRTOS-009688?style=flat)
-![ESP8266](https://img.shields.io/badge/ESP8266-000000?style=flat)
-![ESP32](https://img.shields.io/badge/ESP32-000000?style=flat)
-
-**Linux & BSP**  
-![Embedded Linux](https://img.shields.io/badge/Embedded_Linux-000000?style=flat&logo=linux&logoColor=white)
-![Yocto](https://img.shields.io/badge/Yocto_Project-35495E?style=flat)
-![AGL](https://img.shields.io/badge/Automotive_Grade_Linux-009639?style=flat)
-![CAN Bus](https://img.shields.io/badge/CAN-Bus-003366?style=flat)
-
-**Multimedia / AI**  
-![GStreamer](https://img.shields.io/badge/GStreamer-FF6F00?style=flat)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat&logo=opencv&logoColor=white)
-![Hailo-8](https://img.shields.io/badge/Hailo--8-FF1493?style=flat)
-![CARLA](https://img.shields.io/badge/CARLA_Simulator-000000?style=flat)
-
-**Tools**  
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white)
-![STM32CubeIDE](https://img.shields.io/badge/STM32CubeIDE-03234B?style=flat)
-![CMake](https://img.shields.io/badge/CMake-064F8C?style=flat&logo=cmake&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white)
-![systemd](https://img.shields.io/badge/systemd-000000?style=flat&logo=systemd&logoColor=white)
-
-</details>
+* **Email**: [minsoung1027@gmail.com](mailto:minsoung1027@gmail.com)
+* **GitHub**: [@nasi546](https://github.com/nasi546)
