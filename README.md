@@ -50,6 +50,7 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 | 센서·액추에이터 통합 | 수위·가스·화재·진동·PIR·온습도 센서, 서보모터, 릴레이, RFID, LCD 등 여러 하드웨어를 하나의 시스템으로 통합 | Aiot_SmartHome, Flood_barrier |
 | Embedded Linux & BSP | Yocto로 RPi5용 이미지 빌드, meta-layer 작성, 디바이스 트리/오버레이, systemd 서비스 등록, MCP2515(CAN) 설정 | [AI-Black-Box](https://github.com/nasi546/AI-Black-Box) |
 | 영상·스트리밍 파이프라인 | V4L2 카메라 캡쳐 → GStreamer 파이프라인 → AI 인퍼런스 → 오버레이 → 출력까지 흐름 설계 및 디버깅 | AI-Black-Box |
+| Linux Device Driver | Character device(/dev), poll/read, IRQ, I2C/GPIO 드라이버 구현, RTC 연동, udev + systemd 자동화 | [Device_Driver_Mini_Project](https://github.com/nasi546/Device_Driver_Mini_Project) |
 | 네트워크 & 통신 | SocketCAN, UDP/TCP, ESP8266/ESP32 Wi-Fi를 이용한 서버–노드 통신 프로토콜 설계 | AI-Black-Box, Aiot_SmartHome |
 | 운영/배포 자동화 (Linux) | udev 트리거 + systemd 서비스/타이머로 USB 기반 앱 업데이트 구성, state.json 기반 버전관리, 헬스체크(pending) 승인, 자동/수동 롤백, 로그/히스토리 관리 | [Raspberry Pi 5 USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update) |
 | 알고리즘 & 기본기 | C++ STL, 자료구조/알고리즘 문제 풀이, 코드 리팩토링 | [baekjoon](https://github.com/nasi546/baekjoon) |
@@ -74,6 +75,10 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
   Raspberry Pi 5(Raspberry Pi OS)에서 USB/외장 SSD를 꽂기만 하면 앱이 자동 업데이트되는 배포 시스템.  
   udev 트리거 + systemd 서비스/타이머로 자동 실행, state.json 기반 버전관리, 헬스체크(pending) 승인, 자동/수동 롤백, 업데이트 히스토리 로그까지 포함.
 
+- **[Device Driver Mini Project](https://github.com/nasi546/Device_Driver_Mini_Project)**  
+  Raspberry Pi 4B 기반 **Linux 디바이스 드라이버(4종) + 데몬 + systemd/udev 자동 실행** 미니 프로젝트.  
+  OLED(SSD1306) 시간/온습도 표시, Rotary/Key로 **RTC 시간 설정**, LED bar로 **습도 레벨 게이지** 출력.
+  
 - **[baekjoon](https://github.com/nasi546/baekjoon)**  
   C++로 백준 알고리즘 문제를 풀이하며 자료구조/알고리즘 기본기를 다지는 저장소.
 
