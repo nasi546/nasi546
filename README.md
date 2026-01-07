@@ -68,6 +68,7 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 
 #### 2. [E.S.S.E.N.T.I.A.L (ESS Guardian)](https://github.com/nasi546/ess-guardian)
 > **ESS 시설 안전 통합 시스템: 환경/열화상 이상 감지 + Hybrid Patrol Robot(ROS2) + MQTT Control Tower**
+
 🏆 **Award**: E.S.S.E.N.T.I.A.L (ESS Guardian) — **대한상공회의소 우수상**
 
 * **핵심 기술:** ROS2(Nav2), ArUco Auto-Docking, MQTT, MLX90640(열화상), RFID, STM32(I2C 센서: SGP30/DHT 계열), MariaDB, Qt UI, systemd/udev 자동기동
