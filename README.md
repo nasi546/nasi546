@@ -71,7 +71,6 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 
 * **핵심 기술:** ROS2(Nav2), ArUco Auto-Docking, MQTT, MLX90640(열화상), RFID, STM32(I2C 센서: SGP30/DHT 계열), MariaDB, Qt UI, systemd/udev 자동기동
 * **내용:** Zone별 환경 데이터를 `ess/env`로 수집하고, 위험 이벤트(가스/열화상)를 `ess/alert`로 즉시 전송해 **DB 이력화 + UI 관제**까지 연결했습니다. 로봇은 순찰 후 ArUco 마커로 **홈 복귀 정렬/보정**을 수행하며, udev로 `/dev/cam_rgb` 심볼릭 링크를 만들어 **부팅 즉시 서비스가 올라오는 배포 구조**(systemd)까지 포함했습니다.
-* **내 역할:** ArUco 정렬/Homing 알고리즘 구현(`src/ess_aruco_move/`), systemd/udev 기반 부팅 자동 실행 번들 구성(`deploy/`), 비전/열화상 이벤트 파이프라인 연동
 
 #### 3. [Raspberry Pi 5 – USB Auto Update System](https://github.com/nasi546/Raspbery-pi5-USB-update)
 > **인터넷 연결 없이 USB만 꽂으면 끝나는 펌웨어 자동 업데이트 시스템**
