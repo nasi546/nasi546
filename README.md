@@ -53,7 +53,7 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 | **Embedded Linux** <br>**& BSP** | • **Yocto** : RPi5용 이미지 빌드, meta-layer 작성 <br>• **Device Tree** : 오버레이 적용 및 커널 설정 <br>• **System** : systemd 서비스 등록, MCP2515(CAN) 설정 | [AI-Black-Box](https://github.com/nasi546/AI-Black-Box)<br>[E.S.S.E.N.T.I.A.L (ess-guardian)🏆](https://github.com/nasi546/ess-guardian) |
 | **영상·스트리밍** | • V4L2 카메라 캡쳐 → GStreamer 파이프라인 설계 <br>• AI 인퍼런스 연동 및 오버레이 출력 최적화 | AI-Black-Box<br>[E.S.S.E.N.T.I.A.L (ess-guardian)](https://github.com/nasi546/ess-guardian) |
 | **Linux Device Driver** | • Character device(/dev), poll/read, IRQ 구현 <br>• I2C/GPIO 드라이버 직접 구현 및 RTC 연동 <br>• udev + systemd를 활용한 자동화 | [Device_Driver_Mini_Project](https://github.com/nasi546/Device_Driver_Mini_Project) |
-| **운영/배포 자동화** | • udev 트리거를 이용한 USB 삽입 감지 자동화 <br>• state.json 기반 버전 관리 및 롤백 시스템 구현 | [Raspberry Pi 5 USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update)<br>[E.S.S.E.N.T.I.A.L (ess-guardian)🏆](https://github.com/nasi546/ess-guardian) |
+| **운영/배포 자동화** | • udev 트리거를 이용한 USB 삽입 감지 자동화 | [Raspberry Pi 5 USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update) |
 | **알고리즘 & 기본기** | • C++ STL 활용, 자료구조/알고리즘 문제 풀이 <br>• 코드 리팩토링 및 최적화 | [baekjoon](https://github.com/nasi546/baekjoon) |
 
 ---
