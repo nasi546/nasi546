@@ -44,8 +44,9 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 <img src="https://img.shields.io/badge/CMake-064F8C?style=flat&logo=cmake&logoColor=white"/>
 <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnu-bash&logoColor=white"/>
 <img src="https://img.shields.io/badge/systemd-000000?style=flat&logo=systemd&logoColor=white"/>
-</details>
 ---
+
+</details>
 
 ### 💡 What I Can Do
 
