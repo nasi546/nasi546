@@ -45,6 +45,7 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 <img src="https://img.shields.io/badge/systemd-000000?style=flat&logo=systemd&logoColor=white"/>
 </details>
 ---
+
 ### 💡 What I Can Do
 
 | 분야 | 내가 할 수 있는 일 | 관련 프로젝트 |
