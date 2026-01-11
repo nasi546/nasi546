@@ -7,7 +7,7 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 **실제 하드웨어가 동작하는 시스템**을 설계하고 구현하는 것을 좋아합니다.
 
 ✅ **Highlights**
-- **Yocto 커스텀 레이어(meta-AIBlackBox)**로 RPi5 이미지 구성: HDMI 800×480 CVT 설정 + SPI/MCP2515 오버레이 + 커널 모듈 autoload + **can0(500kbps) systemd bring-up**까지 포함 ([AI-Black-Box](https://github.com/nasi546/AI-Black-Box))
+- **Yocto 커스텀 레이어(meta-AIBlackBox)** 로 RPi5 이미지 구성: HDMI 800×480 CVT 설정 + SPI/MCP2515 오버레이 + 커널 모듈 autoload + **can0(500kbps) systemd bring-up**까지 포함 ([AI-Black-Box](https://github.com/nasi546/AI-Black-Box))
 - **USB 오프라인 자동 업데이트**: `UPDATE_USB` 라벨 감지(udev) → systemd 서비스/타이머로 실행 + `state.json`(pending/healthy) 기반 자동/수동 롤백 및 헬스 마킹 ([Raspberry Pi 5 USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update))
 - **현장형 자동 기동/디바이스 고정**: ESS에서 udev로 **`/dev/cam_rgb`, `/dev/cam_thermal`** 심링크 고정 + systemd `ess.target`로 기동 순서/조건 정리 + `flock`로 데몬 중복 실행 방지 ([E.S.S.E.N.T.I.A.L (ess-guardian)](https://github.com/nasi546/ess-guardian))
   
