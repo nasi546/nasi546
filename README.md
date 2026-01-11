@@ -6,6 +6,11 @@
 STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서  
 **실제 하드웨어가 동작하는 시스템**을 설계하고 구현하는 것을 좋아합니다.
 
+✅ **Highlights**
+- **Yocto(meta-layer/이미지)** 기반으로 RPi5 임베디드 Linux 배포판 구성 (부팅/DT/패키지 포함)
+- **udev + systemd**로 현장형 자동 업데이트(버전/무결성/백업/롤백/헬스체크) 파이프라인 구축
+- **CAN → KUKSA → AGL Cluster** 데이터 파이프라인 및 Hailo-8/GStreamer 영상 처리 연동
+- 
 ---
 
 ### 🛠 Tech Stack
