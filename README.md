@@ -7,9 +7,9 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 **실제 하드웨어가 동작하는 시스템**을 설계하고 구현하는 것을 좋아합니다.
 
 ✅ **Highlights**
-- **Yocto 커스텀 레이어(meta-AIBlackBox)**로 RPi5 이미지 구성: HDMI 800×480 CVT 설정 + SPI/MCP2515 오버레이 + 커널 모듈 autoload + **can0(500kbps) systemd bring-up**까지 포함
-- **USB 오프라인 자동 업데이트**: 라벨 `UPDATE_USB` 삽입을 **udev→systemd 템플릿 서비스**로 트리거 + **timer 주기 실행** + `state.json`(pending/healthy) 기반 **자동 롤백/수동 롤백/헬스 마킹** 구현
-- **현장형 자동 기동/디바이스 고정**: ESS에서 udev로 **`/dev/cam_rgb`, `/dev/cam_thermal`** 심링크 고정 + systemd `ess.target`로 기동 순서/조건 정리 + `flock`로 데몬 중복 실행 방지
+- **Yocto 커스텀 레이어(meta-AIBlackBox)**로 RPi5 이미지 구성: HDMI 800×480 CVT 설정 + SPI/MCP2515 오버레이 + 커널 모듈 autoload + **can0(500kbps) systemd bring-up**까지 포함 [AI-Black-Box](https://github.com/nasi546/AI-Black-Box)
+- **USB 오프라인 자동 업데이트**: 라벨 `UPDATE_USB` 삽입을 **udev→systemd 템플릿 서비스**로 트리거 + **timer 주기 실행** + `state.json`(pending/healthy) 기반 **자동 롤백/수동 롤백/헬스 마킹** 구현 [Raspberry Pi 5 USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update)
+- **현장형 자동 기동/디바이스 고정**: ESS에서 udev로 **`/dev/cam_rgb`, `/dev/cam_thermal`** 심링크 고정 + systemd `ess.target`로 기동 순서/조건 정리 + `flock`로 데몬 중복 실행 방지 [E.S.S.E.N.T.I.A.L (ess-guardian)](https://github.com/nasi546/ess-guardian)
   
 ---
 
@@ -63,7 +63,7 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 | **Embedded Linux** <br>**& BSP** | • **Yocto** : RPi5용 이미지 빌드, meta-layer 작성 <br>• **Device Tree** : 오버레이 적용 및 커널 설정 <br>• **System** : systemd 서비스 등록, MCP2515(CAN) 설정 | [AI-Black-Box](https://github.com/nasi546/AI-Black-Box)<br>[E.S.S.E.N.T.I.A.L (ess-guardian)🏆](https://github.com/nasi546/ess-guardian) |
 | **영상·스트리밍** | • V4L2 카메라 캡쳐 → GStreamer 파이프라인 설계 <br>• AI 인퍼런스 연동 및 오버레이 출력 최적화 | AI-Black-Box<br>[E.S.S.E.N.T.I.A.L (ess-guardian)](https://github.com/nasi546/ess-guardian) |
 | **Linux Device Driver** | • Character device(/dev), poll/read, IRQ 구현 <br>• I2C/GPIO 드라이버 직접 구현 및 RTC 연동 <br>• udev + systemd를 활용한 자동화 | [Device_Driver_Mini_Project](https://github.com/nasi546/Device_Driver_Mini_Project) |
-| **운영/배포 자동화** |• udev + systemd(Service/Timer) 기반 USB 삽입 트리거 자동 업데이트 <br>• state.json(pending/healthy) 기반 헬스체크 및 자동/수동 롤백 | [Raspberry Pi 5 USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update) |
+| **운영/배포 자동화** | • udev + systemd(Service/Timer) 기반 USB 삽입 트리거 자동 업데이트 <br>• state.json(pending/healthy) 기반 헬스체크 및 자동/수동 롤백 | [Raspberry Pi 5 USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update) |
 | **알고리즘 & 기본기** | • C++ STL 활용, 자료구조/알고리즘 문제 풀이 <br>• 코드 리팩토링 및 최적화 | [baekjoon](https://github.com/nasi546/baekjoon) |
 
 ---
