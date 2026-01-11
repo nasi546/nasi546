@@ -99,12 +99,14 @@ STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서
 
 * **핵심 기술:** Linux Kernel Module, Character Device, I2C Protocol, RTC
 * **내용:** Raspberry Pi 4B에서 OLED, RTC, LED Bar 등을 제어하는 디바이스 드라이버 4종을 직접 작성하고, 데몬 앱과 연동하여 시스템을 제어하는 학습 프로젝트입니다.
+* **결과:** 커널 모듈→/dev I/O→유저 데몬까지 한 흐름으로 연결해, “드라이버 동작/로그/재현”을 스스로 끝까지 확인할 수 있는 기반을 만들었습니다.
 
 #### 5. [Aiot_SmartHome](https://github.com/nasi546/Aiot_SmartHome)
 > **STM32 & ESP32 & RPi5를 통합한 멀티 MCU 스마트홈**
 
 * **핵심 기술:** STM32 HAL, FreeRTOS, Socket 통신, Sensor Integration
 * **내용:** 가스/화재/방범 등 다양한 센서를 통합 관리하며, 외부 위협 감지 시 자동으로 차단 및 경고 시스템이 작동하는 종합 IoT 프로젝트입니다.
+* **결과:** 센서 이벤트를 상태 기반으로 통합하고(경고/차단/알림), MCU–네트워크–호스트까지 연결된 구조로 “현장 동작 가능한 IoT 시스템” 형태로 완성했습니다.
 
 ---
 
