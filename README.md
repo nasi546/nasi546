@@ -1,16 +1,55 @@
 ## 👋 Hi, I'm Minseong (민성)
-
 **"하드웨어를 실제로 움직이는 즐거움을 아는 엔지니어"**
 
 임베디드 & BSP 엔지니어를 목표로 공부하고 있는 개발자입니다.  
-STM32, Raspberry Pi 5, Yocto, CAN, GStreamer, Hailo-8 등을 이용해서  
-**실제 하드웨어가 동작하는 시스템**을 설계하고 구현하는 것을 좋아합니다.
+전원 인가 → **드라이버/디바이스 인식 → 서비스 기동 → 로그/진단**까지,
+현장에서 “다시 꽂아도 똑같이” 동작하는 런타임을 만드는 걸 좋아합니다.
 
-✅ **Highlights**
-- **Yocto 커스텀 레이어(meta-AIBlackBox)** 로 RPi5 이미지 구성: HDMI 800×480 CVT 설정 + SPI/MCP2515 오버레이 + 커널 모듈 autoload + **can0(500kbps) systemd bring-up**까지 포함 ([AI-Black-Box](https://github.com/nasi546/AI-Black-Box))
-- **USB 오프라인 자동 업데이트**: `UPDATE_USB` 라벨 감지(udev) → systemd 서비스/타이머로 실행 + `state.json`(pending/healthy) 기반 자동/수동 롤백 및 헬스 마킹 ([Raspberry Pi 5 USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update))
-- **현장형 자동 기동/디바이스 고정**: ESS에서 udev로 **`/dev/cam_rgb`, `/dev/cam_thermal`** 심링크 고정 + systemd `ess.target`로 기동 순서/조건 정리 + `flock`로 데몬 중복 실행 방지 ([E.S.S.E.N.T.I.A.L (ess-guardian)](https://github.com/nasi546/ess-guardian))
-  
+---
+
+## ✅ Highlights (Proof of Depth)
+
+- **Linux Device Driver Mini Project (C, Kernel Module)**  
+  Raspberry Pi 4B에서 커널 모듈 4종 직접 구현 (**총 1,300+ LoC**)  
+  `IRQ + waitqueue + poll`, `copy_to_user/copy_from_user`, `I2C OLED`, `RTC class ops`, `DHT11 타이밍`  
+  → 코드:  
+  - [Rotary(IRQ/poll)](https://github.com/nasi546/Device_Driver_Mini_Project/blob/main/src/kernel/rotary_device_driver.c)  
+  - [DS1302 RTC(class ops)](https://github.com/nasi546/Device_Driver_Mini_Project/blob/main/src/kernel/ds1302_rpi_rtc.c)  
+  - [SSD1306 I2C(OLED)](https://github.com/nasi546/Device_Driver_Mini_Project/blob/main/src/kernel/ssd1306_i2c.c)  
+  - [DHT11(타이밍/작업큐)](https://github.com/nasi546/Device_Driver_Mini_Project/blob/main/src/kernel/dht11_ledbar.c)
+
+- **Yocto BSP: meta-AIBlackBox (RPi5 배포판 레이어)**  
+  이미지/레시피/오버레이/서비스를 레이어로 고정해 **재현 가능한 BSP 런타임** 구성  
+  예: `aiblackbox-image.bb`, `can0.service`, `MCP2515 dtbo`, 커널 cfg  
+  → 코드:  
+  - [aiblackbox-image.bb](https://github.com/nasi546/AI-Black-Box/blob/main/meta-AIBlackBox/recipes-core/images/aiblackbox-image.bb)  
+  - [can0 bring-up(service)](https://github.com/nasi546/AI-Black-Box/blob/main/meta-AIBlackBox/recipes-core/aiblackbox-can/files/can0.service)  
+  - [mcp2515 overlay](https://github.com/nasi546/AI-Black-Box/tree/main/meta-AIBlackBox/recipes-kernel/aibb-spi0-mcp2515)
+
+- **System Reliability (배포/자동복구)**  
+  USB 오프라인 업데이트에서 backup → pending → health → rollback 흐름 구현  
+  → [Raspberry Pi 5 USB Auto Update](https://github.com/nasi546/Raspbery-pi5-USB-update)
+
+---
+
+## 🔧 Troubleshooting Notes (Root-cause driven)
+- **DHT11 값 랜덤 깨짐** → 타이밍 윈도우/인터럽트 영향  
+  Evidence: udelay 기반 샘플링 + 임계구간 영향 확인  
+  Fix: 타이밍 구간 보호 + 샘플링 로직 정리
+
+- **ROS2 카메라 노드 간헐 크래시** → 점유 충돌(/dev/video0) + 인코딩 불일치(MJPG ↔ bgr8)  
+  Evidence: `fuser /dev/video0`, `journalctl`, v4l2 설정 확인  
+  Fix: 충돌 서비스 마스킹 + `pixel_format=YUYV`, `output_encoding=bgr8`로 고정
+
+---
+
+## 🧰 Core Stack
+**C / Linux Kernel / Embedded Linux / Yocto / Debugging(dmesg, gdb, ftrace)**  
+<details>
+<summary><b>Exposure (used in projects)</b></summary>
+ROS2, GStreamer, CAN, Qt, MariaDB, Hailo-8, STM32, FreeRTOS, ESP32 ...
+</details>
+
 ---
 
 ### 🛠 Tech Stack
