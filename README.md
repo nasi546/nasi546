@@ -47,7 +47,7 @@
 **C / Linux Kernel / Embedded Linux / Yocto / Debugging(dmesg, gdb, ftrace)**  
 <details>
 <summary><b>Exposure (used in projects)</b></summary>
-ROS2, GStreamer, CAN, Qt, MariaDB, Hailo-8, STM32, FreeRTOS, ESP32 ...
+ROS2, GStreamer, CAN, Qt, MariaDB, Hailo-8, STM32, FreeRTOS, ESP32
 </details>
 
 ---
